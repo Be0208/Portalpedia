@@ -1,0 +1,178 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+header {
+    background-color: rgb(232, 232, 232);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+#api-title {
+    font-size: 4rem;
+    margin-bottom: 10px;
+    color: #146E37;
+}
+
+
+nav {
+    width: 37rem;
+    margin: 20px auto; 
+    border-radius: 8px;
+    border: 2px solid black; 
+}
+
+
+#search-input {
+    padding: 8px;
+    font-size: 14px;
+    border: none;
+    border-radius: 8px;
+    background-color: rgb(232, 232, 232);
+    width: 100%;
+}
+
+
+button {
+    padding: 8px 12px;
+    font-size: 14px;
+    background-color: #343a40;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+
+button:hover, #logo:hover, #search:hover {
+    background-color: gray;
+    border-radius: 10px;
+}
+
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+#character-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+
+.character-card {
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 30px;
+    padding: 10px;
+    width: calc(33.33%);
+    background-color: #fff;
+    transition: transform 0.3s ease-in-out;
+    flex-direction: column
+}
+
+.character-card:hover {
+    transform: scale(1.1);
+    background-color: #9badbe;
+}
+
+.character-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+
+.character-description {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+
+.character-description h2,
+.character-description p, 
+.character-description span {
+    margin: 5px;
+}
+
+
+.status {
+    display: flex;
+    align-items: center;
+}
+
+
+.status-indicator {
+    display: inline-block;
+    border-radius: 100%;
+    width: 10px;
+    height: 10px;
+    margin-right: 5px;
+}
+
+
+#pagination {
+    margin-top: 20px;
+    text-align: center;
+}
+
+
+#api-info {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #343a40;
+    color: #fff;
+    text-align: center;
+}.info{
+    justify-content: center;
+    gap: 30px;
+    padding: 30px 0px 30px 0px;
+    display: flex;
+}a{
+    color: white;  
+    background-color: gray;
+    border-radius: 10px;
+    padding: 5px;
+}a:link{
+    text-decoration: none;
+}
+
+#portal {
+    display: block;
+    margin: 0 auto;
+    max-width: 40%;
+    height: auto;
+    margin-top: 20px;
+}
+
+#logo{
+    max-width: 6vh;
+    
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    cursor: pointer; 
+}
+
+#search{
+    max-width: 2rem;
+    max-height: 2rem;
+    display: block;
+    margin: 0;
+    padding: 10px;
+    background-color: rgb(232, 232, 232);
+    cursor: pointer;
+}
+
