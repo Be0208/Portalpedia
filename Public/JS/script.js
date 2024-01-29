@@ -31,14 +31,17 @@ async function getCharacters(page = 1) {
     }
 }
 
+
+
 function displayCharacters(characters) {
-    const characterList = document.getElementById('character-list')
+    const characterList = document.getElementById('character-list');
     characterList.innerHTML = characters.results.map(character => `
-        
-    <div class="character-card ">
+    
+    <div class="character-card  type="button" data-bs-toggle="modal" data-bs-target="#characterModal-${character.id}">
+    
     <img src="${character.image}" class="character-image" alt="${character.name}">
     
-    <button class="character-description type="button" data-bs-toggle="modal" data-bs-target="#card-character">
+    <button class="character-description">
         <p>${character.id}</p>
         <h2>${character.name}</h2>
     </button>
@@ -46,9 +49,13 @@ function displayCharacters(characters) {
 
 
 
-<div class="modal fade" id="card-character">
+<div class="modal fade" id="characterModal-${character.id}">
         <div class="modal-dialog">
             <div class="modal-content">
+            <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">${character.name}</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
                 <div class="modal-body">
 
                 <div class="container">
@@ -80,10 +87,12 @@ function displayCharacters(characters) {
         </div>
     </div>
 
-            
-    
-    `)
+        
+        
+
+    `).join('');
 }
+
 
 function getStatusColor(status) {
     switch (status) {
