@@ -35,57 +35,46 @@ async function getCharacters(page = 1) {
 
 function displayCharacters(characters) {
     const characterList = document.getElementById('character-list');
+
     characterList.innerHTML = characters.results.map(character => `
     
-    <div class="character-card  type="button" data-bs-toggle="modal" data-bs-target="#characterModal-${character.id}">
-    
-    <img src="${character.image}" class="character-image" alt="${character.name}">
-    
-    <button class="character-description">
-        <p>${character.id}</p>
-        <h2>${character.name}</h2>
-    </button>
-</div> 
+    <div class="character-card  type=" button" data-bs-toggle="modal" data-bs-target="#characterModal-${character.id}">
+
+                <img src="${character.image}" class="character-image" alt="${character.name}">
+
+                <button class="character-description">
+                    <p>${character.id}</p>
+                    <h2>${character.name}</h2>
+                </button>
+            </div>
 
 
+            <div class="modal fade" id="characterModal-${character.id}">
+                <div class="modal-dialog">
+                    <div class="modal-content">
 
-<div class="modal fade" id="characterModal-${character.id}">
-        <div class="modal-dialog">
-            <div class="modal-content">
-            <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">${character.name}</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                <div class="modal-body">
-
-                <div class="container">
-                        <img src="${character.image}" class="character-image my-3" alt="${character.name}">
-
-                        <div class="my-3 flex-column  status">
-
-                        <div class="flex-row  ">
-                        <div class="status-indicator" style="background-color:${getStatusColor(character.status)}"></div>
-        
-                        <span>${character.status} - ${character.species} </span>
-                    </div>
-        
-
-                            <div class="my-3 ">Última localização conhecida: ${character.location.name}</div>
-                            
-                            <div>Visto pela última vez em: ${character.lastEpisode}</div>
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">${character.name}</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
 
-                        <div class="row my-3 ">
-
-                            
+                        <div class="modal-body">
+                            <div class="container">
+                                <img src="${character.image}" class="character-image my-3" alt="${character.name}">
+                                <div class="my-3 flex-column  status">
+                                    <div class="flex-row  ">
+                                        <div class="status-indicator" style="background-color:${getStatusColor(character.status)}"></div>
+                                        <span>${character.status} - ${character.species} </span>
+                                    </div>
+                                    <div class="my-3 ">Última localização conhecida: ${character.location.name}</div>
+                                    <div>Visto pela última vez em: ${character.lastEpisode}</div>
+                                </div>
+                                <div class="row my-3 "></div>
+                            </div>
                         </div>
-
                     </div>
-
                 </div>
             </div>
-        </div>
-    </div>
 
         
         
