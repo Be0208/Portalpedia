@@ -12,38 +12,33 @@
 
 </head>
 
-<body>
-    <header class="container-fluid ">
-        <img onclick="reloadPage()" id="logo" src="./image/RICK_MORTY_ICON.png" alt="logo">
-        <div class="row justify-content-center " id="api-title">API de Rick and Morty</div>
-        <nav>
-            <div class="row justify-content-between align-items-center ">
-                <div class="col-10 ">
-                    <input type="search" id="search-input" placeholder="Pesquisar personagem...">
-                </div>
-                <div class="col  m-2 ">
-                    <img id="search" onclick="searchCharacters()" src="./image/search.png" alt="" srcset="">
-                </div>
+<body class="vw-100 ">
+    <img onclick="reloadPage()" class="position-fixed" id="logo" src="./image/RICK_MORTY_ICON.png" alt="logo">
+    <header class="container-fluid p-3 vw-100 d-flex flex-column align-items-center">
+
+        <div class="row justify-content-center display-1 my-3 vw-100 " id="api-title">API de Rick and Morty</div>
+
+        <nav class="row align-items-center w-50 my-3">
+            <div class="col-10">
+                <input class="mx-3 " type="search" id="search-input" placeholder="Pesquisar personagem...">
+            </div>
+            <div class="col-2">
+                <img class="mx-3" id="search" onclick="searchCharacters()" src="./image/search.png" alt="" srcset="">
             </div>
         </nav>
-
     </header>
 
-    <main>
-        <div id="character-list">
+    <main class="d-flex flex-column align-items-center ">
 
-            
-
+        <div class="" id="character-list">
         </div>
 
-        <img onclick="obs()" id="portal" src="./image/rick-and-morty-portal-shoes-white-clothing-zavvi-23.png"
-            alt="IMG portal Rick and Morty">
-
-        <div id="pagination"></div>
+        <div class="py-5 " id="pagination">
+        </div>
     </main>
 
     <footer>
-        <div id="api-info"></div>
+        <div class=" p-5 " id="api-info"></div>
     </footer>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="./JS/script.js"></script>

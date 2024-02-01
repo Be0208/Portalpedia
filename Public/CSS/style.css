@@ -1,39 +1,43 @@
-body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f8f9fa;
+@font-face {
+    font-family: RICK ;
+    src: url("font/get_schwifty.ttf") format('truetype');
 }
+body{
+    background-color: #4d5257;
+}
+
 
 header {
-    background-color: rgb(232, 232, 232);
+    background-color: rgb(30, 31, 33);
     color: #fff;
-    padding: 20px;
-    text-align: center;
 }
 
+
 #api-title {
-    font-size: 4rem;
-    margin-bottom: 10px;
     color: #146E37;
+    font-family: 'RICK', cursive;
 }
 
 
 nav {
-    width: 37rem;
-    margin: 20px auto; 
     border-radius: 8px;
     border: 2px solid black; 
 }
 
 
 #search-input {
-    padding: 8px;
-    font-size: 14px;
     border: none;
     border-radius: 8px;
-    background-color: rgb(232, 232, 232);
-    width: 100%;
+    background-color: rgb(30, 31, 33);
+    width: 80%;
+    color: #fff;
+}
+#search{
+    max-width: 2rem;
+    max-height: 2rem;
+    padding: 5px;
+    background-color: rgb(30, 31, 33);
+    cursor: pointer;
 }
 
 
@@ -54,13 +58,10 @@ button:hover, #logo:hover, #search:hover {
 
 
 main {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+    background-color: #2d3134;
 }
 
-
-#character-list {
+#character-list { 
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -69,14 +70,15 @@ main {
 
 .character-card {
     display: flex;
-    border: 1px solid #ccc;
     border-radius: 5px;
     margin: 30px;
-    padding: 10px;
+    
     width: calc(33.33%);
     background-color: #fff;
     transition: transform 0.3s ease-in-out;
-    flex-direction: column
+    flex-direction: column;
+    font-family: 'RICK', cursive;
+
 }
 
 .character-card:hover {
@@ -96,6 +98,8 @@ main {
     display: flex;
     flex-direction: column;
     width: 100%;
+    border-radius: 5px;
+    
 }
 
 
@@ -103,6 +107,7 @@ main {
 .character-description p, 
 .character-description span {
     margin: 5px;
+    
 }
 
 
@@ -119,26 +124,33 @@ main {
     height: 10px;
     margin-right: 5px;
 }
+.modal-header{
+    background-color: rgb(30, 31, 33);
+    color: #fff;
+    
+}.modal-body{
+    background-color: #2d3134;
+    color: #fff;
+}.btn-close{
+    filter: invert(1);
+}
 
 
 #pagination {
     margin-top: 20px;
     text-align: center;
+    filter: invert(1);
+
 }
 
 
 #api-info {
-    margin-top: 20px;
-    padding: 10px;
     background-color: #343a40;
     color: #fff;
     text-align: center;
-}.info{
-    justify-content: center;
-    gap: 30px;
-    padding: 30px 0px 30px 0px;
-    display: flex;
-}a{
+    font-family: 'RICK', cursive;
+}
+a{
     color: white;  
     background-color: gray;
     border-radius: 10px;
@@ -147,32 +159,14 @@ main {
     text-decoration: none;
 }
 
-#portal {
-    display: block;
-    margin: 0 auto;
-    max-width: 40%;
-    height: auto;
-    margin-top: 20px;
-}
 
 #logo{
     max-width: 6vh;
-    
-    margin: 0;
-    padding: 0;
-    position: fixed;
-    top: 0;
-    left: 0;
+    filter: invert(1);
+    top: 1;
+    left: 1;
     cursor: pointer; 
 }
 
-#search{
-    max-width: 2rem;
-    max-height: 2rem;
-    display: block;
-    margin: 0;
-    padding: 10px;
-    background-color: rgb(232, 232, 232);
-    cursor: pointer;
-}
+
 

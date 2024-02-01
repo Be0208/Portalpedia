@@ -38,7 +38,7 @@ function displayCharacters(characters) {
 
     characterList.innerHTML = characters.results.map(character => `
     
-    <div class="character-card  type=" button" data-bs-toggle="modal" data-bs-target="#characterModal-${character.id}">
+    <div class="character-card"  type=" button" data-bs-toggle="modal" data-bs-target="#characterModal-${character.id}">
 
                 <img src="${character.image}" class="character-image" alt="${character.name}">
 
@@ -110,7 +110,7 @@ function displayPagination() {
         buttonAnteriorHTML = `<button onclick="changePage(${currentPage - 1})">${currentPage - 1}</button>`
     }
 
-    const buttonAtualHTML = `<button style="background-color: gray" class="current-page">${currentPage}</button>`
+    const buttonAtualHTML = `<button  class="current-page">${currentPage}</button>`
 
     let buttonPosteriorHTML = ''
     if (currentPage < totalPages) {
@@ -174,7 +174,7 @@ async function fetchApiInfo() {
 
         const apiInfoContainer = document.getElementById('api-info')
             apiInfoContainer.innerHTML = `
-                <div class="info">
+                <div class="info justify-content-center py-3 d-flex gap-5">
                 <p>Total de Personagens: ${charactersData.data.info.count}</p>
                 <p>Total de Localizações: ${locationsData.data.info.count}</p>
                 <p>Total de Episódios: ${episodesData.data.info.count}</p>
