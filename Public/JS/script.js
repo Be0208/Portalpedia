@@ -38,7 +38,7 @@ function displayCharacters(characters) {
 
     characterList.innerHTML = characters.results.map(character => `
     
-    <div class="character-card m-5"  type=" button" data-bs-toggle="modal" data-bs-target="#characterModal-${character.id}">
+    <div class="character-card m-3 col" type=" button" data-bs-toggle="modal" data-bs-target="#characterModal-${character.id}">
 
                 <img src="${character.image}" class="character-image" alt="${character.name}">
 
@@ -181,7 +181,8 @@ async function fetchApiInfo() {
                 </div>
 
                 <p>Desenvolvido por <strong>BernardoDartora</strong> em 2023</p>
-                <a href="https://github.com/Be0208" target="_blank">Meu GitHub</a>
+                
+                <a class="btn bE bg-success " href="https://github.com/Be0208" target="_blank">Meu GitHub</a>
             `
     } catch (error) {
         console.error('Error fetching API info:', error)

@@ -2,11 +2,13 @@
     font-family: RICK ;
     src: url("font/get_schwifty.ttf") format('truetype');
 }
+
 body{
     background-color: #4d5257;
-}.bg{
+}.bg {
     background-image: url("../image/FUNDO_2.jpg");
     background-repeat: no-repeat;
+    background-blend-mode: luminosity;
     background-size: cover;
 }
 
@@ -14,12 +16,14 @@ body{
 header {
     background-color: rgb(30, 31, 33);
     color: #fff;
+    
 }
 
 
 #api-title {
     color: #146E37;
     font-family: 'RICK', cursive;
+    animation: glow 2s infinite;
 }
 
 
@@ -37,11 +41,15 @@ nav {
     color: #fff;
 }
 #search{
+    border-radius: 8px;
+
     max-width: 2rem;
     max-height: 2rem;
     padding: 5px;
     background-color: rgb(30, 31, 33);
     cursor: pointer;
+    animation: pulseGreenButton 2s infinite;
+    
 }
 
 
@@ -80,12 +88,15 @@ main {
     transition: transform 0.3s ease-in-out;
     flex-direction: column;
     font-family: 'RICK', cursive;
-
+    /* animation: pulseGreenBorder 2s infinite; */
+    animation: flyAnimation 3s infinite ease-in-out, pulseGreenBorder 2s infinite;
 }
 
 .character-card:hover {
     transform: scale(1.1);
     background-color: #9badbe;
+    animation: none;
+    animation: pulseGreenBorder 2s infinite;
 }
 
 .character-image {
@@ -141,8 +152,6 @@ main {
 #pagination {
     margin-top: 20px;
     text-align: center;
-    filter: invert(1);
-
 }
 
 
@@ -159,16 +168,116 @@ a{
     padding: 5px;
 }a:link{
     text-decoration: none;
+}.bE{
+    animation: pulseGreenButton 2s infinite;
+}
+.bE:hover{
+    background-color: #9badbe;
+    transform: scale(1.5);
+    
 }
 
 
 #logo{
-    max-width: 6vh;
+    max-width: 5vw;
     filter: invert(1);
     top: 1;
     left: 1;
     cursor: pointer; 
+    animation: rotateAndPulse 3s infinite;
 }
 
+/* key */
+
+@keyframes rotateAndPulse {
+    0% {
+        transform: scale(1) rotate(0deg);
+    }
+    50% {
+        transform: scale(1.1) rotate(180deg);
+    }
+    100% {
+        transform: scale(1) rotate(360deg);
+    }
+}
+
+@keyframes glow {
+    0% {
+        color: #146E37; /* Cor inicial do título */
+        text-shadow: 0 0 10px rgba(20, 110, 55, 0.8); /* Sombra inicial */
+    }
+    50% {
+        color: #1EFF00; /* Cor brilhante durante a animação */
+        text-shadow: 0 0 20px rgba(30, 255, 0, 0.8); /* Sombra brilhante durante a animação */
+    }
+    100% {
+        color: #146E37; /* Cor final do título */
+        text-shadow: 0 0 10px rgba(20, 110, 55, 0.8); /* Sombra final */
+    }
+}
+
+@keyframes pulseGreenBorder {
+    0% {
+        border-color: #146E37; /* Cor inicial da borda */
+        box-shadow: 0 0 10px rgba(20, 110, 55, 0.8); /* Sombra inicial */
+    }
+    50% {
+        border-color: #1EFF00; /* Cor brilhante durante a animação */
+        box-shadow: 0 0 20px rgba(30, 255, 0, 0.8); /* Sombra brilhante durante a animação */
+    }
+    100% {
+        border-color: #146E37; /* Cor final da borda */
+        box-shadow: 0 0 10px rgba(20, 110, 55, 0.8); /* Sombra final */
+    }
+}
+
+@keyframes pulseModal {
+    0% {
+        box-shadow: 0 0 20px rgba(20, 110, 55, 0.8); /* Sombra inicial */
+    }
+    50% {
+        box-shadow: 0 0 50px rgba(30, 255, 0, 0.8); /* Sombra brilhante durante a animação */
+    }
+    100% {
+        box-shadow: 0 0 20px rgba(20, 110, 55, 0.8); /* Sombra final */
+    }
+}
+
+.modal-content{
+    /* Adicione a animação ao modal aberto */
+    animation: pulseModal 2s infinite;
+}
+
+@keyframes pulseGreenButton {
+    0% {
+        background-color: #146E37; /* Cor inicial do botão */
+        box-shadow: 0 0 10px rgba(20, 110, 55, 0.8); /* Sombra inicial */
+    }
+    50% {
+        background-color: #1EFF00; /* Cor brilhante durante a animação */
+        box-shadow: 0 0 20px rgba(30, 255, 0, 0.8); /* Sombra brilhante durante a animação */
+    }
+    100% {
+        background-color: #146E37; /* Cor final do botão */
+        box-shadow: 0 0 10px rgba(20, 110, 55, 0.8); /* Sombra final */
+    }
+}
+
+#pagination button {
+    /* Adicione a animação aos botões de paginação */
+    animation: pulseGreenButton 2s infinite;
+}
+
+@keyframes flyAnimation {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
 
 
