@@ -4,6 +4,10 @@
 }
 body{
     background-color: #4d5257;
+}.bg{
+    background-image: url("../image/FUNDO_2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 
@@ -58,7 +62,7 @@ button:hover, #logo:hover, #search:hover {
 
 
 main {
-    background-color: #2d3134;
+    
 }
 
 #character-list { 
@@ -71,9 +75,7 @@ main {
 .character-card {
     display: flex;
     border-radius: 5px;
-    margin: 30px;
-    
-    width: calc(33.33%);
+    width: calc(20%);
     background-color: #fff;
     transition: transform 0.3s ease-in-out;
     flex-direction: column;

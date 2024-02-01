@@ -38,13 +38,13 @@ function displayCharacters(characters) {
 
     characterList.innerHTML = characters.results.map(character => `
     
-    <div class="character-card"  type=" button" data-bs-toggle="modal" data-bs-target="#characterModal-${character.id}">
+    <div class="character-card m-5"  type=" button" data-bs-toggle="modal" data-bs-target="#characterModal-${character.id}">
 
                 <img src="${character.image}" class="character-image" alt="${character.name}">
 
                 <button class="character-description">
                     <p>${character.id}</p>
-                    <h2>${character.name}</h2>
+                    <h4>${character.name}</h4>
                 </button>
             </div>
 
