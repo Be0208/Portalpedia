@@ -1,7 +1,7 @@
-@font-face {
+/* @font-face {
     font-family: Get Schwifty Font ;
-    src: url("../font/get_schwifty.ttf") format('truetype');
-}
+    src: url("font/get_schwifty.ttf") format('truetype');
+} */
 
 .bg{
     background-color: #292626;
@@ -22,7 +22,7 @@ header {
 
 #api-title {
     color: #146E37;
-    font-family: 'Get Schwifty Font';
+    font-family: Arial, sans-serif;
     animation: glow 2s infinite;
 }
 
@@ -83,7 +83,7 @@ button:hover, #logo:hover, #search:hover {
     background-color: #fff;
     transition: transform 0.3s ease-in-out;
     flex-direction: column;
-    font-family: 'Get Schwifty Font';
+    font-family: Arial, Helvetica, sans-serif;
     /* animation: pulseGreenBorder 2s infinite; */
     animation: flyAnimation 3s infinite ease-in-out, pulseGreenBorder 2s infinite;
 }
@@ -159,7 +159,7 @@ button:hover, #logo:hover, #search:hover {
     background-color: #343a40;
     color: #fff;
     text-align: center;
-    font-family: 'Get Schwifty Font';
+    font-family: Arial, Helvetica, sans-serif;
 }
 a{
     color: white;  
