@@ -3,13 +3,13 @@
     src: url("font/get_schwifty.ttf") format('truetype');
 }
 
-body{
-    background-color: #4d5257;
-}.bg {
+.bg{
+    background-color: #292626;
+
     background-image: url("../image/FUNDO_2.jpg");
     background-repeat: no-repeat;
-    background-blend-mode: luminosity;
-    background-size: cover;
+    background-size: 100%;
+    background-position: bottom left;
 }
 
 
@@ -68,10 +68,6 @@ button:hover, #logo:hover, #search:hover {
     border-radius: 10px;
 }
 
-
-main {
-    
-}
 
 #character-list { 
     display: flex;
@@ -181,23 +177,31 @@ a{
 #logo{
     max-width: 5vw;
     filter: invert(1);
-    top: 1;
-    left: 1;
+    top: 2;
+    left: 2;
     cursor: pointer; 
     animation: rotateAndPulse 3s infinite;
+
 }
+
+.espaço{
+    height: 40vh;
+    
+}
+
 
 /* key */
 
 @keyframes rotateAndPulse {
     0% {
-        transform: scale(1) rotate(0deg);
+        transform: scale(1) rotate(0deg) translateY(0);
     }
     50% {
-        transform: scale(1.1) rotate(180deg);
+        
+        transform: scale(1.1) rotate(180deg) translateY(-20px) ;
     }
     100% {
-        transform: scale(1) rotate(360deg);
+        transform: scale(1) rotate(360deg) translateY(0);
     }
 }
 
@@ -273,7 +277,7 @@ a{
         transform: translateY(0);
     }
     50% {
-        transform: translateY(-5px);
+        transform: translateY(10px);
     }
     100% {
         transform: translateY(0);

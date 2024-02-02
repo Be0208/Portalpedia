@@ -42,9 +42,9 @@ function displayCharacters(characters) {
 
                 <img src="${character.image}" class="character-image" alt="${character.name}">
 
-                <button class="character-description">
+                <button class="d-flex character-description">
                     <p>${character.id}</p>
-                    <h4>${character.name}</h4>
+                    <p>${character.name}</p>
                 </button>
             </div>
 
@@ -95,37 +95,36 @@ function getStatusColor(status) {
 }
 
 function displayPagination() {
-    const paginationContainer = document.getElementById('pagination')
+    const paginationContainer = document.getElementById('pagination');
 
-    let buttonInicialHtml = ''
+    let buttonInicialHtml = '';
     if (currentPage > 2) {
-        
         buttonInicialHtml = `
-        <button onclick="changePage(1)">1</button>
-        <span>... </span>`
+        <button class="btn btn-outline-success " onclick="changePage(1)">1</button>
+        <span>... </span>`;
     }
 
-    let buttonAnteriorHTML = ''
+    let buttonAnteriorHTML = '';
     if (currentPage > 1) {
-        buttonAnteriorHTML = `<button onclick="changePage(${currentPage - 1})">${currentPage - 1}</button>`
+        buttonAnteriorHTML = `<button class="btn btn-outline-success " onclick="changePage(${currentPage - 1})">${currentPage - 1}</button>`;
     }
 
-    const buttonAtualHTML = `<button  class="current-page">${currentPage}</button>`
+    const buttonAtualHTML = `<button class="btn btn-succes current-page">${currentPage}</button>`;
 
-    let buttonPosteriorHTML = ''
+    let buttonPosteriorHTML = '';
     if (currentPage < totalPages) {
-        buttonPosteriorHTML = `<button onclick="changePage(${currentPage + 1})">${currentPage + 1}</button>`
+        buttonPosteriorHTML = `<button class="btn btn-outline-success " onclick="changePage(${currentPage + 1})">${currentPage + 1}</button>`;
     }
 
-    let buttonFinalHTML = ''
+    let buttonFinalHTML = '';
     if (currentPage + 1 !== totalPages && currentPage !== totalPages) {
         buttonFinalHTML = `
             <span>...</span>
-            <button onclick="changePage(${totalPages})">${totalPages}</button>
-        `
+            <button class="btn btn-outline-success " onclick="changePage(${totalPages})">${totalPages}</button>
+        `;
     }
 
-    paginationContainer.innerHTML = `${buttonInicialHtml}${buttonAnteriorHTML}${buttonAtualHTML}${buttonPosteriorHTML}${buttonFinalHTML}`
+    paginationContainer.innerHTML = `${buttonInicialHtml}${buttonAnteriorHTML}${buttonAtualHTML}${buttonPosteriorHTML}${buttonFinalHTML}`;
 }
 
 async function fetchAndDisplayCharacters(page) {
