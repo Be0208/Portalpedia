@@ -1,7 +1,7 @@
-/* @font-face {
-    font-family: Get Schwifty Font ;
-    src: url("font/get_schwifty.ttf") format('truetype');
-} */
+@font-face {
+    font-family: rick ;
+    src: url("../font/get_schwifty.ttf") format('truetype');
+}
 
 .bg{
     background-color: #292626;
@@ -22,8 +22,9 @@ header {
 
 #api-title {
     color: #146E37;
-    font-family: Arial, sans-serif;
+    font-family: rick;
     animation: glow 2s infinite;
+    font-size: 10vw;
 }
 
 
@@ -138,12 +139,12 @@ button:hover, #logo:hover, #search:hover {
 .modal-header{
     background-color: rgb(30, 31, 33);
     color: #fff;
-    font-family: "Get Schwifty Font";
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     
 }.modal-body{
     background-color: #2d3134;
     color: #fff;
-    font-family: "Get Schwifty Font";
+    font-family:Arial, Helvetica, sans-serif;
 }.btn-close{
     filter: invert(1);
 }
