@@ -2,6 +2,10 @@
     font-family: rick ;
     src: url("../font/get_schwifty.ttf") format('truetype');
 }
+*{
+    margin: 0;
+    padding: 0;
+}
 
 .bg{
     background-color: #292626;
