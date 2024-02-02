@@ -34,7 +34,7 @@ async function getCharacters(page = 1) {
 
 
 function displayCharacters(characters) {
-    const characterList = document.getElementById('character-list');
+    const characterList = document.getElementById('character-list')
 
     characterList.innerHTML = characters.results.map(character => `
     
@@ -79,7 +79,7 @@ function displayCharacters(characters) {
         
         
 
-    `).join('');
+    `).join('')
 }
 
 
@@ -95,36 +95,36 @@ function getStatusColor(status) {
 }
 
 function displayPagination() {
-    const paginationContainer = document.getElementById('pagination');
+    const paginationContainer = document.getElementById('pagination')
 
-    let buttonInicialHtml = '';
+    let buttonInicialHtml = ''
     if (currentPage > 2) {
         buttonInicialHtml = `
         <button class="btn btn-outline-success " onclick="changePage(1)">1</button>
-        <span>... </span>`;
+        <span>... </span>`
     }
 
-    let buttonAnteriorHTML = '';
+    let buttonAnteriorHTML = ''
     if (currentPage > 1) {
-        buttonAnteriorHTML = `<button class="btn btn-outline-success " onclick="changePage(${currentPage - 1})">${currentPage - 1}</button>`;
+        buttonAnteriorHTML = `<button class="btn btn-outline-success " onclick="changePage(${currentPage - 1})">${currentPage - 1}</button>`
     }
 
-    const buttonAtualHTML = `<button class="btn btn-succes current-page">${currentPage}</button>`;
+    const buttonAtualHTML = `<button class="btn btn-succes current-page">${currentPage}</button>`
 
-    let buttonPosteriorHTML = '';
+    let buttonPosteriorHTML = ''
     if (currentPage < totalPages) {
-        buttonPosteriorHTML = `<button class="btn btn-outline-success " onclick="changePage(${currentPage + 1})">${currentPage + 1}</button>`;
+        buttonPosteriorHTML = `<button class="btn btn-outline-success " onclick="changePage(${currentPage + 1})">${currentPage + 1}</button>`
     }
 
-    let buttonFinalHTML = '';
+    let buttonFinalHTML = ''
     if (currentPage + 1 !== totalPages && currentPage !== totalPages) {
         buttonFinalHTML = `
             <span>...</span>
             <button class="btn btn-outline-success " onclick="changePage(${totalPages})">${totalPages}</button>
-        `;
+        `
     }
 
-    paginationContainer.innerHTML = `${buttonInicialHtml}${buttonAnteriorHTML}${buttonAtualHTML}${buttonPosteriorHTML}${buttonFinalHTML}`;
+    paginationContainer.innerHTML = `${buttonInicialHtml}${buttonAnteriorHTML}${buttonAtualHTML}${buttonPosteriorHTML}${buttonFinalHTML}`
 }
 
 async function fetchAndDisplayCharacters(page) {
@@ -152,13 +152,23 @@ async function searchCharacters() {
     } else {
         try {
             const response = await axios.get(`${apiUrl}?name=${searchTerm}`)
-            const searchData = { ...response.data, results: response.data.results.map(character => ({ ...   character, lastEpisode: character })) }
-            currentPage = 1
-            totalPages = 1
+            const searchData = {
+                ...response.data,
+                results: await Promise.all(response.data.results.map(async character => {
+                    const lastEpisodeUrl = character.episode[character.episode.length - 1]
+                    const lastEpisodeResponse = await axios.get(lastEpisodeUrl)
+                    return {
+                        ...character,
+                        lastEpisode: lastEpisodeResponse.data.name
+                    }
+                }))
+            }
+            currentPage = 1 // Resetar currentPage ao realizar uma pesquisa
+            totalPages = Math.ceil(response.data.info.count / response.data.info.pages) // Atualizar totalPages com base nos resultados da pesquisa
             displayCharacters(searchData)
             displayPagination()
         } catch (error) {
-            console.error('Error searching characters:', error)
+            console.error('Erro ao buscar personagens:', error)
         }
     }
 }
