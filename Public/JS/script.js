@@ -179,7 +179,7 @@ async function fetchApiInfo() {
                 <p>Total de Episódios: ${episodesData.data.info.count}</p>
                 </div>
 
-                <p>Desenvolvido por <strong>BernardoDartora</strong> em 2023</p>
+                <p>Desenvolvido por <strong>Bernardo Dartora</strong> em 2024</p>
                 
                 <a class="btn bE bg-success " href="https://github.com/Be0208" target="_blank">Meu GitHub</a>
             `
@@ -198,8 +198,5 @@ function reloadPage() {
     location.reload()
 }
 
-function obs(){
-        location.href = `https://www.adorocinema.com/series/serie-11561/criticas/`
-}
 
 fetchAndDisplayCharacters(1)
