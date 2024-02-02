@@ -22,7 +22,7 @@ header {
 
 #api-title {
     color: #146E37;
-    font-family: 'RICK', cursive;
+    font-family: 'RICK';
     animation: glow 2s infinite;
 }
 
@@ -83,7 +83,7 @@ button:hover, #logo:hover, #search:hover {
     background-color: #fff;
     transition: transform 0.3s ease-in-out;
     flex-direction: column;
-    font-family: 'RICK', cursive;
+    font-family: 'RICK';
     /* animation: pulseGreenBorder 2s infinite; */
     animation: flyAnimation 3s infinite ease-in-out, pulseGreenBorder 2s infinite;
 }
@@ -155,7 +155,7 @@ button:hover, #logo:hover, #search:hover {
     background-color: #343a40;
     color: #fff;
     text-align: center;
-    font-family: 'RICK', cursive;
+    font-family: 'RICK';
 }
 a{
     color: white;  
