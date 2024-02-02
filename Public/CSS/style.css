@@ -100,6 +100,8 @@ button:hover, #logo:hover, #search:hover {
     height: 100%;
     object-fit: cover;
     margin-right: 10px;
+    border-radius: 5px;
+
 }
 
 
@@ -136,10 +138,12 @@ button:hover, #logo:hover, #search:hover {
 .modal-header{
     background-color: rgb(30, 31, 33);
     color: #fff;
+    font-family: "RICK";
     
 }.modal-body{
     background-color: #2d3134;
     color: #fff;
+    font-family: "RICK";
 }.btn-close{
     filter: invert(1);
 }
