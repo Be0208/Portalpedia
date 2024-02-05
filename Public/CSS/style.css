@@ -150,6 +150,8 @@ button:hover, #logo:hover, #search:hover {
     color: #fff;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     
+}.modal-content{
+    animation: flyAnimation 3s infinite ease-in-out, pulseGreenBorder 2s infinite;
 }.modal-body{
     background-color: #2d3134;
     color: #fff;
@@ -271,10 +273,7 @@ a{
     }
 }
 
-.modal-content{
-    /* Adicione a animação ao modal aberto */
-    animation: flyAnimation 3s infinite ease-in-out, pulseGreenBorder 2s infinite;
-}
+
 
 @keyframes pulseGreenButton {
     0% {
