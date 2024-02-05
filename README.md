@@ -6,7 +6,7 @@ O objetivo dessa aplicação é fornecer um guia sobre o desenho 'Rick and Morty
 
 ---
 
-## Como a aplicação funciona?
+## 👨‍💻 Como a aplicação funciona?
 
 O site deve apresentar todos os personagens da série e permitir um filtro por nome e clicando em um específico, devem aparecer as informações como: nome, localização e lista de episódios em que ele aparece.
 
@@ -20,15 +20,17 @@ Para o desenvolvimento deste site utilizei as seguintes tecnologias:
 - CSS;
 - [Bootstrap;](https://getbootstrap.com)
 
-## 🚀 Como clonar a aplicação
+## 🚀 Como utilizar a aplicação
 
 ```bash
 # Clone o repositório
 git clone https://github.com/Be0208/Atividade-Final-de-Modulo-Front-End-3
 
-#
-
 ```
+
+#### Apresentação do site
+
+- [Vercel](https://atividade-final-de-modulo-front-end-3-f0qc6jvrx.vercel.app)
 
 <p align= center>
 Desenvolvido por <strong>Bernardo Tamborena Dartora</strong>   <br>   Me adicione no <a href="https://www.linkedin.com/in/bernardo-dartora-550376291/"target="_blank">Linkedin</a>
