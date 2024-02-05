@@ -31,5 +31,5 @@ git clone https://github.com/Be0208/Atividade-Final-de-Modulo-Front-End-3
 ```
 
 <p align= center>
-Desenvolvido por <strong>Bernardo Tamborena Dartora</strong>   -----   Me adicione no <a href="https://www.linkedin.com/in/bernardo-dartora-550376291/"target="_blank">Linkedin</a>
+Desenvolvido por <strong>Bernardo Tamborena Dartora</strong>   <br>   Me adicione no <a href="https://www.linkedin.com/in/bernardo-dartora-550376291/"target="_blank">Linkedin</a>
 </p>
