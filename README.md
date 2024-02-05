@@ -28,9 +28,9 @@ git clone https://github.com/Be0208/Atividade-Final-de-Modulo-Front-End-3
 
 ```
 
-#### Apresentação do site
+## 🖥️ Apresentação do site
 
-- [Vercel](https://atividade-final-de-modulo-front-end-3-f0qc6jvrx.vercel.app)
+[Vercel](https://atividade-final-de-modulo-front-end-3-f0qc6jvrx.vercel.app)
 
 <p align= center>
 Desenvolvido por <strong>Bernardo Tamborena Dartora</strong>   <br>   Me adicione no <a href="https://www.linkedin.com/in/bernardo-dartora-550376291/"target="_blank">Linkedin</a>
