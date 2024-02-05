@@ -5,6 +5,10 @@
 *{
     margin: 0;
     padding: 0;
+    
+}
+body{
+    overflow-x: hidden;
 }
 
 .bg{
@@ -106,7 +110,7 @@ button:hover, #logo:hover, #search:hover {
     object-fit: cover;
     margin-right: 10px;
     border-radius: 5px;
-
+    animation: flyAnimation 3s infinite ease-in-out, pulseGreenBorder 2s infinite;
 }
 
 
@@ -149,6 +153,7 @@ button:hover, #logo:hover, #search:hover {
     background-color: #2d3134;
     color: #fff;
     font-family:Arial, Helvetica, sans-serif;
+    border-radius: 5px;
 }.btn-close{
     filter: invert(1);
 }
@@ -267,7 +272,7 @@ a{
 
 .modal-content{
     /* Adicione a animação ao modal aberto */
-    animation: pulseModal 2s infinite;
+    animation: flyAnimation 3s infinite ease-in-out, pulseGreenBorder 2s infinite;
 }
 
 @keyframes pulseGreenButton {

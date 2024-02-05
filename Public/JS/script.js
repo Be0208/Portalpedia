@@ -75,10 +75,6 @@ function displayCharacters(characters) {
                     </div>
                 </div>
             </div>
-
-        
-        
-
     `).join('')
 }
 
