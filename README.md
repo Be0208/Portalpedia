@@ -18,7 +18,7 @@ Para o desenvolvimento deste site utilizei as seguintes tecnologias:
 - CSS;
 - Bootstrap;
 
-## 🚀 Como testar a aplicação
+## 🚀 Como clonar a aplicação
 
 ```bash
 # Clone o repositório
