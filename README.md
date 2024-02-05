@@ -4,6 +4,8 @@
 
 O objetivo dessa aplicação é fornecer um guia sobre o desenho 'Rick and Morty' lançado em 2013, pela Adult Swim, que acompanha as malucas viagens no tempo-espaço e por universos paralelos de Rick, um cientista com problemas com a bebida, e seu neto Morty, um adolescente não tão brilhante quanto o avô.
 
+---
+
 ## Como a aplicação funciona?
 
 O site deve apresentar todos os personagens da série e permitir um filtro por nome e clicando em um específico, devem aparecer as informações como: nome, localização e lista de episódios em que ele aparece.
@@ -16,7 +18,7 @@ Para o desenvolvimento deste site utilizei as seguintes tecnologias:
 - JavaScript;
 - HTML;
 - CSS;
-- Bootstrap;
+- [Bootstrap;](https://getbootstrap.com)
 
 ## 🚀 Como clonar a aplicação
 
