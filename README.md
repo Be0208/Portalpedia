@@ -27,7 +27,7 @@ Para o desenvolvimento deste site utilizei as seguintes tecnologias:
 
 ```bash
 # Clone o repositório
-git clone https://github.com/Be0208/Atividade-Final-de-Modulo-Front-End-3
+git clone https://github.com/Be0208/Portalpedia
 
 ```
 
